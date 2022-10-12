@@ -104,7 +104,7 @@ with interactive_plot_5:
 
 
 with interactive_plot_4:
-    st.header("Do tables with higher bills also tip higher?")
+    st.header("Do tables with higher bills also tip higher?xd")
     option = st.multiselect('Select at least one account please', tipping_dataset['select_gender'].drop_duplicates())
     st.write('Your gender selected is:', option)
 #option_2 = st.sidebar.multiselect('Now, select at least one bank', df['BANCO'].drop_duplicates())
