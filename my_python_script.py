@@ -105,6 +105,13 @@ with interactive_plot_5:
 
 with interactive_plot_4:
     st.header("Do tables with higher bills also tip higher?")
+    option = st.sidebar.multiselect('Select at least one account please', df['select_gender'].drop_duplicates())
+    st.write('Your gender selected is:', option)
+#option_2 = st.sidebar.multiselect('Now, select at least one bank', df['BANCO'].drop_duplicates())
+#st.write('Your bank selected is:', option_2)  
+    tipping_dataset = tipping_dataset[tipping_dataset['select_gender'].isin(option)]
+    #df = df[df['BANCO'].isin(option_2)]
+    fig_4 = px.scatter(tipping_dataset, x="total_bill", y="tip", color="sex", size="size", title="Tip V. Total Bill")
     st.plotly_chart(fig_4, use_container_width=True)
     yes_tip = st.checkbox("Yes!")
     no_tip = st.checkbox("No")
