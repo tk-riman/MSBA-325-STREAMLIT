@@ -62,7 +62,7 @@ interactive_plot_5 = st.container()
 
 
 with interactive_plot_1:
-    st.header("Have you ever wondered whether your height is average or not?")
+    st.header("HavE you ever wondered whether your height is average or not?")
     st.text("Check this out, Let's start with the boys!")
     st.plotly_chart(fig_1, use_container_width=True)
 
